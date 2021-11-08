@@ -1,28 +1,29 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-class Counter extends Component{
-
-    constructor(props){
-        super(props)
-
-        this.state={
-            count:0
+class Message extends Component {
+    constructor() {
+        super()
+        this.state = {
+            message: 'welcome visitor to dxc'  //message partition
         }
     }
 
-    increase(){
-        this.state.count = this.state.count +1
-        console.log(this.state.count)
-    }
-
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                Count -{this.state.count}
-                <button onclick- {()=> this.increase()}>increment</button>
+                <h1>{this.state.message}</h1>
+                <button   onClick = {()=> this.changeMessage()}>subscribe</button>
+
             </div>
         )
     }
+
+    changeMessage(){
+        this.setState({    //changing the content of the partition
+            message: 'thank you for subscribing'
+        })
+    }
+
 }
 
-export default Counter
+export default Message
