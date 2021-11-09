@@ -9,6 +9,8 @@ function App() {
   return (
     <div className="App">
 
+      <counter/>
+
       <Message/>
 
       <Greet name="deepu" college="IIT">
