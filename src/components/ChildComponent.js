@@ -2,17 +2,15 @@ import React from 'react'
 
 /**
  * this is a stateless component
- * @returns
+ * @returns 
  */
-function ChildComponent (props) {
-    
-        return (
-            <div>
-                <button onClick ={props.deepikaHandler}>greet parent</button>
-            </div>
-        )
-    }
-
+function ChildComponent(props) {
+    return (
+        <div>
+            <button onClick = {() => props.deepikaHandler('aryan')}>greet parent</button>
+        </div>
+    )
+}
 
 export default ChildComponent
 
