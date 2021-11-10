@@ -1,4 +1,3 @@
-
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -13,12 +12,14 @@ import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import Table from './components/Table';
 import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
  
 
 function App() {
   return (
     <div className="App">
-    <Stylesheet/>
+    <Inline/>
+    <Stylesheet  enabled = {true}/>
     <Table/>
     <NameList/>
     <UserGreeting/>
