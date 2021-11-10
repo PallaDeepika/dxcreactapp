@@ -1,3 +1,4 @@
+
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -7,36 +8,24 @@ import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
-import parentComponent from './components/ParentComponent';
-import UserGreeting from'./components/UserGreeting';
+import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
+import Table from './components/Table';
+import Stylesheet from './components/Stylesheet';
+ 
 
 function App() {
   return (
     <div className="App">
-      <NameList/>
-      <UserGreeting/>
-      <parentcomponent/>
-      <EventBind/>
-      <ClassClick/>
-      <FunctionClick/>
+    <Stylesheet/>
+    <Table/>
+    <NameList/>
+    <UserGreeting/>
 
-      <counter/>
-
-      <Message/>
-
-      <Greet name="deepu" college="IIT">
-        <p>this is children property</p>
-      </Greet>
-
-      <Greet name="lucky" college="oxford">
-        <button>click me</button>
-        </Greet>
-        <Greet/>
-
-      <Welcome name="priya" alias ="lucky"/>
-      
-
+    <ParentComponent/>
+    <EventBind/>
+    
     </div>
   );
 }
