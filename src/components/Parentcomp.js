@@ -1,4 +1,5 @@
 import React, { Component,PureComponent } from 'react'
+import MemoComp from './MemoComp';
 import PureComp from './PureComp';
 import RegularComp from './RegularComp';
 
@@ -14,7 +15,7 @@ constructor(props) {
     componentDidMount(){
         setInterval(() => {
             this.setState({
-                name: 'deepu-parentcomp'
+                name: 'deepu-parentcomp-memo'
             })
         }, 2000);
     }
@@ -24,11 +25,11 @@ constructor(props) {
         return (
             <div>
                 Parent component
-                <RegularComp name ={this.state.name}></RegularComp>
-                <PureComp name = {this.state.name}></PureComp>
+                <MemoComp name = {this.state.name}/>
+               { /* <RegularComp name ={this.state.name}></RegularComp>
+        <PureComp name = {this.state.name}></PureComp> */}
             </div>
         )
     }
 }
-
 export default Parentcomp
